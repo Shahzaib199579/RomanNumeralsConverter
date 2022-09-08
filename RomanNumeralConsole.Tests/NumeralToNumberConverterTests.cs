@@ -57,5 +57,8 @@ public class NumeralToNumberConverterTests
         _numeralToNumberConverter.Convert("C").Should().Be(100);
         _numeralToNumberConverter.Convert("D").Should().Be(500);
         _numeralToNumberConverter.Convert("M").Should().Be(1000);
+        _numeralToNumberConverter.Convert("MMCCXXII").Should().Be(2222);
+        _numeralToNumberConverter.Convert("MD").Should().Be(1500);
+        _numeralToNumberConverter.Convert("CMXCIX").Should().Be(999);
     }
 }
