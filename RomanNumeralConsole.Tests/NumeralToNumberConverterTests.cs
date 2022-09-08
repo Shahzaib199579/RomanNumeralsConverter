@@ -17,9 +17,6 @@ public class NumeralToNumberConverterTests
     {
         _numeralToNumberConverter.Convert("XXXX").Should().Be(0);
         _numeralToNumberConverter.Convert("XXVVVVI").Should().Be(0);
-        _numeralToNumberConverter.Convert("VV").Should().Be(0);
-        _numeralToNumberConverter.Convert("XXVLL").Should().Be(0);
-        _numeralToNumberConverter.Convert("DD").Should().Be(0);
 
     }
 
