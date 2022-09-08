@@ -113,7 +113,7 @@ namespace RomanNumeralConsole
 
                     if (_romanNumeralArray.ToList().IndexOf(System.Convert.ToString(l)) > _romanNumeralArray.ToList().IndexOf(previous))
                     {
-                        sum = _romanNumeralDictionary[System.Convert.ToString(l)] - sum;
+                        sum = (sum - _romanNumeralDictionary[previous]) + (_romanNumeralDictionary[System.Convert.ToString(l)] - _romanNumeralDictionary[previous]);
                     }
                     else
                     {

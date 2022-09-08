@@ -2,12 +2,19 @@
 using RomanNumeralConsole;
 
 var numeralConverter = new NumeralToNumberConverter();
-Console.WriteLine(numeralConverter.Convert("LX"));
 
-var numberToNumeralConverter = new NumberToNumeralConverter();
-Console.WriteLine(numberToNumeralConverter.Convert(999));
-Console.WriteLine(numberToNumeralConverter.Convert(2999));
-Console.WriteLine(numberToNumeralConverter.Convert(2000));
-Console.WriteLine(numberToNumeralConverter.Convert(2500));
-Console.WriteLine(numberToNumeralConverter.Convert(90));
-Console.WriteLine(numberToNumeralConverter.Convert(55));
+do
+{
+    Console.Write("Please enter a Roman Numeral: ");
+    var numberToConvert = Console.ReadLine();
+    var result = numeralConverter.Convert(numberToConvert.ToUpper().Trim());
+    if (result != 0)
+    {
+        Console.Write("The Number is : ");
+        Console.WriteLine(result);
+    }
+    else
+    {
+        Console.WriteLine("Please enter correct number.");
+    }
+} while (true);
