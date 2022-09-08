@@ -40,6 +40,11 @@ namespace RomanNumeralConsole
             }
         }
 
+        /// <summary>
+        /// Method that converts numbers to roman numerals.
+        /// </summary>
+        /// <param name="num">The number that needs to be converted.</param>
+        /// <returns>string representing the number in roman numerals.</returns>
         public string Convert(int num)
         {
             if (num == 0)
@@ -70,10 +75,15 @@ namespace RomanNumeralConsole
                 }
             }
             return romanNumeralString;
-
-            throw new NotImplementedException("This need implementation.");
         }
 
+        /// <summary>
+        /// Method that converts numbers greater than or equal to 1000.
+        /// </summary>
+        /// <param name="index">The index of the digit in string.
+        /// The index points to thousand, hundred, Ten and Unit digit</param>
+        /// <param name="digit">The digit that needs to be converted to Roman Numeral</param>
+        /// <returns>string representing roman numeral of digit.</returns>
         private string ConvertNumberGreaterThanOrEqualThousand(int index, string digit)
         {
             if (index == 0)
@@ -95,6 +105,13 @@ namespace RomanNumeralConsole
             }
         }
 
+        /// <summary>
+        /// Method that converts numbers greater than or equal to 100.
+        /// </summary>
+        /// <param name="index">The index of the digit in string.
+        /// The index points to thousand, hundred, Ten and Unit digit</param>
+        /// <param name="digit">The digit that needs to be converted to Roman Numeral</param>
+        /// <returns>string representing roman numeral of digit.</returns>
         private string ConvertNumberGreaterThanOrEqualHundred(int index, string digit)
         {
             if (index == 0)
@@ -112,6 +129,13 @@ namespace RomanNumeralConsole
             }
         }
 
+        /// <summary>
+        /// Method that converts numbers greater than or equal to 10 and less than 100.
+        /// </summary>
+        /// <param name="index">The index of the digit in string.
+        /// The index points to thousand, hundred, Ten and Unit digit</param>
+        /// <param name="digit">The digit that needs to be converted to Roman Numeral</param>
+        /// <returns>string representing roman numeral of digit.</returns>
         private string ConvertNumberGreaterThanOrEqualTenAndLessThanHundred(int index, string digit)
         {
             if (index == 0)
@@ -125,6 +149,13 @@ namespace RomanNumeralConsole
             }
         }
 
+        /// <summary>
+        /// Method that converts numbers greater than or equal to 1 and less than 10.
+        /// </summary>
+        /// <param name="index">The index of the digit in string.
+        /// The index points to thousand, hundred, Ten and Unit digit</param>
+        /// <param name="digit">The digit that needs to be converted to Roman Numeral</param>
+        /// <returns>string representing roman numeral of digit.</returns>
         private string ConvertNumberGreaterThanOrEqualOneAndLessTen(int index, string digit)
         {
             return ProcessUnitDigit(digit);
